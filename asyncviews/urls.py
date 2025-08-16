@@ -16,7 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from .views import ds
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('ds/', ds, name='ds'),
 ]
+
+
+# urlpatterns = [
+#     path('', ds, name='home'),     # abre a contagem na raiz "/"
+#     path('ds/', ds, name='ds'),    # mantém a rota do exercício
+#     path('admin/', admin.site.urls),
+# ]
